@@ -1,0 +1,198 @@
+/**index.wxss**/
+.header-wrapper {
+  width: 750rpx;
+  height: 450rpx;
+}
+
+.header-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.header-title {
+  position: absolute;
+  left: 0; bottom: 50rpx;
+  padding: 0 30rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 56rpx;
+  color: white;
+}
+
+.news-list-wrapper {
+  margin-top: 20rpx;
+  padding: 0 50rpx;
+}
+
+.news-list-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: 200rpx;
+  padding: 25rpx 0;
+  border-bottom: 1px solid rgba(180, 180, 180, 0.3);
+}
+
+.news-list-item:last-child {
+  border-bottom: none;
+}
+
+.news-list-image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 5px;
+}
+
+.news-list-text {
+  width: 480rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news-infor-wrapper {
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: rgba(100, 100, 100, 0.5);
+  overflow: hidden;
+}
+
+.news-source {
+  float: left;
+}
+
+.news-time {
+  float: right;
+}
+
+.news-list-title {
+  font-size: 34rpx;
+  line-height: 45rpx;
+}
+
+.news-type-choose {
+  position: fixed;
+  left: 40rpx; bottom: 40rpx;
+  width: 180rpx;
+  height: 180rpx;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 2px 2px 6px #555;
+}
+
+.news-type-button-wrapper {
+  position: absolute;
+}
+
+/*小按钮图标样式*/
+.news-type {
+  position: absolute;
+  top: 0; left: 0;
+  z-index: -1;
+  width: 120rpx;
+  padding: 15rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background-color: #202020;
+  border: 15rpx solid #f4ea2a;
+}
+
+.news-type-wrapper {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10rpx;
+  border: 15rpx solid #f4ea2a;
+  border-radius: 50%;
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.news-type-icon {
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.news-type-text-small,
+.news-type-text-big {
+ text-align: center;
+ color: #202020;
+}
+
+.news-type-text-big {
+  font-size: 50rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+}
+
+.news-type-text-small {
+  font-size: 20rpx;
+  line-height: 20rpx;
+}
+
+/*隐藏动画*/
+.hidden-type-buttons .news-type {
+  opacity: 0;
+  transition: all 0.15s linear;
+}
+
+.hidden-type-buttons .news-type:nth-child(1) {
+  transform: rotate(0.95turn) translateY(0px) translateY(0) rotate(0.05turn) scale(0);
+}
+
+.hidden-type-buttons .news-type:nth-child(2) {
+  transform: rotate(0.02turn) translateY(0px) translateY(0) rotate(0.98turn) scale(0);
+}
+
+.hidden-type-buttons .news-type:nth-child(3) {
+  transform: rotate(0.09turn) translateY(0px) translateY(0) rotate(0.91turn) scale(0);
+}
+
+.hidden-type-buttons .news-type:nth-child(4) {
+  transform: rotate(0.16turn) translateY(0px) translateY(0) rotate(0.84turn) scale(0);
+}
+
+.hidden-type-buttons .news-type:nth-child(5) {
+  transform: rotate(0.23turn) translateY(0px) translateY(0) rotate(0.77turn) scale(0);
+}
+
+.hidden-type-buttons .news-type:nth-child(6) {
+  transform: rotate(0.3turn) translateY(0px) translateY(0) rotate(0.7turn) scale(0);
+}
+
+/*显示动画*/
+.show-type-buttons .news-type {
+  opacity: 1;
+  transition: all 0.15s linear;
+}
+
+.show-type-buttons .news-type:nth-child(1) {
+  transform: rotate(0.95turn) translateY(-175px) translateY(50%) rotate(0.05turn) scale(0.46);
+}
+
+.show-type-buttons .news-type:nth-child(2) {
+  transform: rotate(0.02turn) translateY(-175px) translateY(50%) rotate(0.98turn) scale(0.46);
+}
+
+.show-type-buttons .news-type:nth-child(3) {
+  transform: rotate(0.09turn) translateY(-175px) translateY(50%) rotate(0.91turn) scale(0.46);
+}
+
+.show-type-buttons .news-type:nth-child(4) {
+  transform: rotate(0.16turn) translateY(-175px) translateY(50%) rotate(0.84turn) scale(0.46);
+}
+
+.show-type-buttons .news-type:nth-child(5) {
+  transform: rotate(0.23turn) translateY(-175px) translateY(50%) rotate(0.77turn) scale(0.46);
+}
+
+.show-type-buttons .news-type:nth-child(6) {
+  transform: rotate(0.3turn) translateY(-175px) translateY(50%) rotate(0.7turn) scale(0.46);
+}

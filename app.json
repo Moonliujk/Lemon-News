@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f4ea2a",
+    "navigationBarTitleText": "柠檬新闻",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  }
+}

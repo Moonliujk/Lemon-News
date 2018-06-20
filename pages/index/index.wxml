@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<!--根据新闻数量显示新闻的轮播图-->
+<swiper indicator-dots="true" indicator-active-color="#f4ea2a" autoplay="true" interval="3000" duration="800" circular="true" class="header-wrapper">
+  <swiper-item wx:for="{{newsHeadList}}">
+    <image src="{{item.firstImage}}" class="header-image" data-id="{{item.id}}" bindtap="showNewsDetail"></image>
+    <view class="header-title">{{item.title}}</view>
+  </swiper-item>
+</swiper>
+
+<scroll-view y-scroll>
+  <view class="news-list-wrapper"  bindtouchmove="throttle" bindtouchstart="touchStartHandler">
+    <view wx:for="{{newsMainList}}" class="news-list-item" data-id="{{item.id}}" bindtap="showNewsDetail">
+      <image src="{{item.firstImage}}" class="news-list-image" mode="aspectFill"></image>
+      <view class="news-list-text">
+        <view class="news-list-title">{{item.title}}</view>
+        <view class="news-infor-wrapper">
+          <view class="news-source">{{item.source ? item.source:"网络"}}</view>
+          <view class="news-time">{{item.date}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--大按钮样式-->
+  <view wx:if="{{willShowBigButton}}" class="news-type-choose" bindtap="clickBigButtonEvent">
+    <view class="news-type-button-wrapper {{buttonWrapperAttr}}">
+        <image wx:for="{{buttonsIcon}}" class="news-type" src="../../images/{{item}}-button.svg" bindtap="chooseNewsType" data-newstype="{{item}}"></image>
+    </view>
+
+    <view class="news-type-wrapper">
+      <image wx:if="{{isBigIconCliced == false}}" src="../../images/lemon-icon.svg" class="news-type-icon"></image>
+      <view wx:else class="news-type-text">
+        <view class="news-type-text-big">{{currentType}}</view>
+        <view class="news-type-text-small">News</view>
+      </view>
+    </view>
+  </view>
+
+</scroll-view>

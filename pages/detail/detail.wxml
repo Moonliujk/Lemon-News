@@ -1,0 +1,28 @@
+<!--pages/detail/detail.wxml-->
+<view class="news-header-wrapper">
+  <image src="{{newsImage}}" class="news-header-image" mode="widthFix"></image>
+  <view class="news-header-text-wrapper">
+    <view class="news-header-type">
+      <image class="news-header-typeIcon" src="../../images/{{newsType ? newsType:'gn'}}.svg"></image>
+      {{newsTypeTxt}}
+    </view>
+    <view class="news-header-title">{{newsTitle}}</view>
+    <view class="news-header-infor">
+      <text class="news-header-source">{{newsSrc? newsSrc:'网络'}}</text>
+      <text class="news-header-date">{{newsDate}}</text>
+    </view>
+  </view>  
+</view>
+
+<scroll-view y-scroll>
+  <view wx:for="{{content}}">
+    <view wx:if="{{item.type == 'p'}}" class="article-paragraph">{{item.text}}</view>
+    <image wx:elif="{{item.type == 'image'}}" mode="widthFix" class="article-image" src="{{item.src}}"></image>
+    <view wx:elif="{{item.type == 'image-caption'}}" class="article-caption">{{item.text}}</view>
+    <view wx:else="{{item.type == 'strong'}}" class="article-strong">{{item.text}}</view>
+  </view>
+</scroll-view>
+
+<view class="end-icon">
+  <image class="lemon-icon-end" src="../../images/lemon-icon.svg"></image>
+</view>
